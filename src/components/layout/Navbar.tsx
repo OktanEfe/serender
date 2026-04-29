@@ -56,7 +56,7 @@ const Navbar = () => {
             aria-label="Serender Anasayfa"
           >
             <Image
-              src="/Serender.svg"
+              src="/SERENDER.svg"
               alt="Serender Ekolojik Yaşam Derneği"
               width={600}
               height={200}
