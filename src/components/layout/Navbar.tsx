@@ -43,7 +43,7 @@ const Navbar = () => {
 
           <Link
             href="/"
-            className="text-[#231F20] text-xl md:text-2xl font-light tracking-tight hover:text-[#004A30] transition-colors duration-300"
+            className="text-[#231F20] text-xl md:text-2xl font-light tracking-tight hover:text-[#1E4D3A] transition-colors duration-300"
           >
             Serender
           </Link>
@@ -55,13 +55,13 @@ const Navbar = () => {
                 href={link.href}
                 className={`relative text-[13px] tracking-wide transition-colors duration-300 group ${
                   pathname === link.href
-                    ? "text-[#004A30] font-medium"
+                    ? "text-[#1E4D3A] font-medium"
                     : "text-[#5C5C56] font-normal hover:text-[#231F20]"
                 }`}
               >
                 {link.name}
                 <span
-                  className={`absolute -bottom-0.5 left-0 h-[1px] bg-[#004A30] transition-all duration-300 ${
+                  className={`absolute -bottom-0.5 left-0 h-[1px] bg-[#1E4D3A] transition-all duration-300 ${
                     pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
@@ -72,13 +72,13 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             <Link
               href="/bize-ulasin"
-              className="hidden md:inline-flex items-center border border-[#004A30] text-[#004A30] text-[13px] font-medium tracking-wide px-5 py-2 rounded-full hover:bg-[#004A30] hover:text-white transition-all duration-300"
+              className="hidden md:inline-flex items-center border border-[#1E4D3A] text-[#1E4D3A] text-[13px] font-medium tracking-wide px-5 py-2 rounded-full hover:bg-[#1E4D3A] hover:text-white transition-all duration-300"
             >
               İletişime Geç
             </Link>
 
             <button
-              className="md:hidden p-2 -mr-1 text-[#231F20] hover:text-[#004A30] transition-colors"
+              className="md:hidden p-2 -mr-1 text-[#231F20] hover:text-[#1E4D3A] transition-colors"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Menüyü aç/kapat"
             >
@@ -127,8 +127,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`text-[15px] py-4 border-b border-[#E8E4DC]/60 transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-[#004A30] font-medium"
-                    : "text-[#231F20] font-normal hover:text-[#004A30]"
+                    ? "text-[#1E4D3A] font-medium"
+                    : "text-[#231F20] font-normal hover:text-[#1E4D3A]"
                 }`}
                 style={{ transitionDelay: isOpen ? `${i * 40}ms` : "0ms" }}
               >
@@ -141,7 +141,7 @@ const Navbar = () => {
             <Link
               href="/bize-ulasin"
               onClick={() => setIsOpen(false)}
-              className="block w-full border border-[#004A30] text-[#004A30] text-center text-[14px] font-medium tracking-wide py-3.5 rounded-full hover:bg-[#004A30] hover:text-white transition-all duration-300"
+              className="block w-full border border-[#1E4D3A] text-[#1E4D3A] text-center text-[14px] font-medium tracking-wide py-3.5 rounded-full hover:bg-[#1E4D3A] hover:text-white transition-all duration-300"
             >
               İletişime Geç
             </Link>

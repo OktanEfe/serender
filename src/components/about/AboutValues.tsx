@@ -6,28 +6,28 @@ const values = [
     id: "01",
     title: "Doğayla Uyum",
     desc: "Her projemizde ekosistemin doğal döngülerini koruyarak, doğayla çatışmak yerine onunla birlikte var olmayı seçiyoruz.",
-    image: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1200&q=85",
+    image: "/hakkimizda/dogayla-uyum.webp",
     large: true,
   },
   {
     id: "02",
     title: "Uygulamalı Öğrenme",
     desc: "Bilgiyi sınıftan çıkarıp toprağa, atölyeye, pratiğe taşıyoruz.",
-    image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&q=80",
+    image: "/hakkimizda/uygulamali-ogrenme.webp",
     large: false,
   },
   {
     id: "03",
     title: "Topluluk Ruhu",
     desc: "Bireysel dönüşümün toplumsal bir güce dönüşeceğine inanıyoruz.",
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
+    image: "/hakkimizda/topluluk-ruhu.webp",
     large: false,
   },
   {
     id: "04",
     title: "Gelecek Sorumluluğu",
     desc: "Bugün attığımız her adım yarının dünyasını şekillendiriyor.",
-    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&q=80",
+    image: "/hakkimizda/gelecek-sorumlulugu.webp",
     large: false,
   },
 ];
@@ -72,7 +72,7 @@ const AboutValues = () => {
                 <h3 className="text-white text-2xl md:text-3xl font-light tracking-tight mb-4">
                   {featured.title}
                 </h3>
-                <p className="text-white/65 text-base font-light leading-relaxed max-w-sm">
+                <p className="text-white text-base font-light leading-relaxed max-w-sm">
                   {featured.desc}
                 </p>
               </div>
@@ -101,7 +101,7 @@ const AboutValues = () => {
                     <h3 className="text-white text-lg font-medium tracking-tight mb-1.5">
                       {item.title}
                     </h3>
-                    <p className="text-white/60 text-[13px] font-light leading-relaxed">
+                    <p className="text-white text-[13px] font-light leading-relaxed">
                       {item.desc}
                     </p>
                   </div>

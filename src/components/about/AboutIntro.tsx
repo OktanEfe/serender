@@ -21,7 +21,6 @@ const AboutIntro = () => {
             </div>
           </div>
 
-          {/* Metin */}
           <div>
             <span className="text-[10px] font-medium tracking-[0.25em] text-[#004A30]/70 uppercase mb-6 block">
               Kim Olduğumuz
