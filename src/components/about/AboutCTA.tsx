@@ -11,23 +11,23 @@ const AboutCTA = () => {
 
           <Link
             href="/projeler"
-            className="group bg-white rounded-3xl p-8 md:p-10 flex items-end justify-between border border-[#E8E4DC] hover:border-[#004A30]/20 transition-all duration-500 hover:shadow-[0_8px_40px_-12px_rgba(0,74,48,0.12)] min-h-[180px]"
+            className="group bg-white rounded-3xl p-8 md:p-10 flex items-end justify-between border border-[#E8E4DC] hover:border-[#1E4D3A]/20 transition-all duration-500 hover:shadow-[0_8px_40px_-12px_rgba(0,74,48,0.12)] min-h-[180px]"
           >
             <div>
               <p className="text-[11px] font-medium tracking-[0.15em] text-[#9C9C94] uppercase mb-5">
                 Çalışmalarımız
               </p>
-              <h3 className="text-3xl font-light text-[#231F20] leading-tight tracking-tight group-hover:text-[#004A30] transition-colors duration-300">
+              <h3 className="text-3xl font-light text-[#231F20] leading-tight tracking-tight group-hover:text-[#1E4D3A] transition-colors duration-300">
                 Projelerimizi<br />
                 <span className="font-serif italic">keşfedin.</span>
               </h3>
             </div>
-            <ArrowUpRight size={24} strokeWidth={1.5} className="text-[#9C9C94] group-hover:text-[#004A30] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0 mb-1" />
+            <ArrowUpRight size={24} strokeWidth={1.5} className="text-[#9C9C94] group-hover:text-[#1E4D3A] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0 mb-1" />
           </Link>
 
           <Link
             href="/bize-ulasin"
-            className="group bg-[#004A30] rounded-3xl p-8 md:p-10 flex items-end justify-between min-h-[180px] hover:bg-[#003623] transition-all duration-500"
+            className="group bg-[#1E4D3A] rounded-3xl p-8 md:p-10 flex items-end justify-between min-h-[180px] hover:bg-[#13362A] transition-all duration-500"
           >
             <div>
               <p className="text-[11px] font-medium tracking-[0.15em] text-white/40 uppercase mb-5">

@@ -9,10 +9,10 @@ import { posts } from "@/data/posts";
 const BlogPage = () => {
   return (
     <>
-      <section className="relative w-full bg-[#004A30] overflow-hidden pt-40 pb-20">
+      <section className="relative w-full bg-[#1E4D3A] overflow-hidden pt-40 pb-20">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#0F6A4A]/20 rounded-full blur-[140px]" />
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#003623]/50 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#13362A]/50 rounded-full blur-[100px]" />
         </div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8">
@@ -42,7 +42,7 @@ const BlogPage = () => {
               <Link
                 key={post.id}
                 href={`/blog/${post.slug}`}
-                className="group bg-white rounded-3xl overflow-hidden border border-[#E8E4DC] hover:border-[#004A30]/15 transition-all duration-500 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex flex-col"
+                className="group bg-white rounded-3xl overflow-hidden border border-[#E8E4DC] hover:border-[#1E4D3A]/15 transition-all duration-500 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex flex-col"
               >
                 <div className="relative h-52 overflow-hidden">
                   <Image
@@ -56,7 +56,7 @@ const BlogPage = () => {
                   <div className="absolute inset-0 bg-black/10" />
 
                   <div className="absolute top-4 left-4">
-                    <span className="bg-white/90 backdrop-blur-sm text-[#004A30] text-[10px] font-medium tracking-[0.15em] uppercase px-3 py-1.5 rounded-full">
+                    <span className="bg-white/90 backdrop-blur-sm text-[#1E4D3A] text-[10px] font-medium tracking-[0.15em] uppercase px-3 py-1.5 rounded-full">
                       {post.category}
                     </span>
                   </div>
@@ -67,7 +67,7 @@ const BlogPage = () => {
                     {post.date}
                   </time>
 
-                  <h3 className="text-[#231F20] text-lg font-medium leading-snug group-hover:text-[#004A30] transition-colors duration-300">
+                  <h3 className="text-[#231F20] text-lg font-medium leading-snug group-hover:text-[#1E4D3A] transition-colors duration-300">
                     {post.title}
                   </h3>
 
@@ -75,7 +75,7 @@ const BlogPage = () => {
                     {post.excerpt}
                   </p>
 
-                  <div className="pt-3 flex items-center gap-1.5 text-[13px] font-medium text-[#231F20] group-hover:text-[#004A30] transition-colors duration-200">
+                  <div className="pt-3 flex items-center gap-1.5 text-[13px] font-medium text-[#231F20] group-hover:text-[#1E4D3A] transition-colors duration-200">
                     Devamını Oku
                     <ArrowUpRight
                       size={13}

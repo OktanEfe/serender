@@ -4,12 +4,12 @@ import React from "react";
 
 const AboutVision = () => {
   return (
-    <section className="relative w-full bg-[#004A30] py-24 md:py-32 overflow-hidden">
+    <section className="relative w-full bg-[#1E4D3A] py-24 md:py-32 overflow-hidden">
 
       {/* Ambient ışık */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0F6A4A]/25 rounded-full blur-[140px]" />
-        <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-[#003623]/50 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-[#13362A]/50 rounded-full blur-[120px]" />
       </div>
 
       {/* Dalgalı SVG arka plan */}

@@ -34,10 +34,10 @@ const ContactPage = () => {
 
   return (
     <>
-      <section className="relative w-full bg-[#004A30] overflow-hidden pt-40 pb-24">
+      <section className="relative w-full bg-[#1E4D3A] overflow-hidden pt-40 pb-24">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0F6A4A]/20 rounded-full blur-[140px]" />
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#003623]/50 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#13362A]/50 rounded-full blur-[100px]" />
         </div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8">
@@ -66,10 +66,10 @@ const ContactPage = () => {
             <div className="bg-white rounded-3xl p-8 md:p-12 border border-[#E8E4DC]">
               {sent ? (
                 <div className="flex flex-col items-start gap-4 py-8">
-                  <div className="w-12 h-12 rounded-full bg-[#004A30]/10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-[#1E4D3A]/10 flex items-center justify-center">
                     <ArrowUpRight
                       size={20}
-                      className="text-[#004A30]"
+                      className="text-[#1E4D3A]"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -90,7 +90,7 @@ const ContactPage = () => {
                         mesaj: "",
                       });
                     }}
-                    className="mt-4 text-[13px] font-medium text-[#004A30] border-b border-[#004A30]/30 hover:border-[#004A30] transition-colors"
+                    className="mt-4 text-[13px] font-medium text-[#1E4D3A] border-b border-[#1E4D3A]/30 hover:border-[#1E4D3A] transition-colors"
                   >
                     Yeni mesaj gönder
                   </button>
@@ -98,7 +98,7 @@ const ContactPage = () => {
               ) : (
                 <>
                   <div className="mb-10">
-                    <span className="text-[10px] font-medium tracking-[0.25em] text-[#004A30]/70 uppercase mb-3 block">
+                    <span className="text-[10px] font-medium tracking-[0.25em] text-[#1E4D3A]/70 uppercase mb-3 block">
                       Bize Yazın
                     </span>
                     <h2 className="text-[#231F20] text-2xl md:text-3xl font-light leading-tight tracking-tight">
@@ -119,7 +119,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="Adınız Soyadınız"
-                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#004A30]/40 transition-colors"
+                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#1E4D3A]/40 transition-colors"
                         />
                       </div>
                       <div className="flex flex-col gap-2">
@@ -133,7 +133,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="ornek@email.com"
-                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#004A30]/40 transition-colors"
+                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#1E4D3A]/40 transition-colors"
                         />
                       </div>
                     </div>
@@ -149,7 +149,7 @@ const ContactPage = () => {
                           value={formData.telefon}
                           onChange={handleChange}
                           placeholder="+90 5xx xxx xx xx"
-                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#004A30]/40 transition-colors"
+                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#1E4D3A]/40 transition-colors"
                         />
                       </div>
                       <div className="flex flex-col gap-2">
@@ -161,7 +161,7 @@ const ContactPage = () => {
                           value={formData.konu}
                           onChange={handleChange}
                           required
-                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[14px] font-light text-[#231F20] focus:outline-none focus:border-[#004A30]/40 transition-colors appearance-none"
+                          className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[14px] font-light text-[#231F20] focus:outline-none focus:border-[#1E4D3A]/40 transition-colors appearance-none"
                         >
                           <option value="" disabled>
                             Konu seçin
@@ -188,13 +188,13 @@ const ContactPage = () => {
                         required
                         rows={5}
                         placeholder="Mesajınızı buraya yazın..."
-                        className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#004A30]/40 transition-colors resize-none"
+                        className="w-full bg-[#FAF9F6] border border-[#E8E4DC] rounded-2xl px-5 py-3.5 text-[#231F20] text-[14px] font-light placeholder:text-[#9C9C94] focus:outline-none focus:border-[#1E4D3A]/40 transition-colors resize-none"
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 bg-[#004A30] text-white text-[13px] font-medium tracking-wide px-8 py-4 rounded-full hover:bg-[#003623] transition-all duration-300 w-fit mt-2"
+                      className="inline-flex items-center gap-2 bg-[#1E4D3A] text-white text-[13px] font-medium tracking-wide px-8 py-4 rounded-full hover:bg-[#13362A] transition-all duration-300 w-fit mt-2"
                     >
                       Gönder
                       <ArrowUpRight size={15} strokeWidth={2} />
@@ -205,7 +205,7 @@ const ContactPage = () => {
             </div>
 
             <div className="flex flex-col gap-4">
-              <div className="bg-[#004A30] rounded-3xl p-8">
+              <div className="bg-[#1E4D3A] rounded-3xl p-8">
                 <p className="text-[10px] font-medium tracking-[0.2em] text-white/40 uppercase mb-6">
                   İletişim Bilgileri
                 </p>
@@ -271,7 +271,7 @@ const ContactPage = () => {
                   className="group flex items-center justify-between py-3"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-9 h-9 rounded-full bg-[#FAF9F6] border border-[#E8E4DC] flex items-center justify-center flex-shrink-0 group-hover:bg-[#004A30] group-hover:border-[#004A30] transition-all duration-300">
+                    <div className="w-9 h-9 rounded-full bg-[#FAF9F6] border border-[#E8E4DC] flex items-center justify-center flex-shrink-0 group-hover:bg-[#1E4D3A] group-hover:border-[#1E4D3A] transition-all duration-300">
                       <FaInstagram
                         size={15}
                         className="text-[#5C5C56] group-hover:text-white transition-colors duration-300"
@@ -281,7 +281,7 @@ const ContactPage = () => {
                       <p className="text-[11px] font-medium tracking-[0.1em] text-[#9C9C94] uppercase mb-0.5">
                         Instagram
                       </p>
-                      <p className="text-[#231F20] text-sm font-light group-hover:text-[#004A30] transition-colors">
+                      <p className="text-[#231F20] text-sm font-light group-hover:text-[#1E4D3A] transition-colors">
                         @serenderekolojikyasam
                       </p>
                     </div>
@@ -289,7 +289,7 @@ const ContactPage = () => {
                   <ArrowUpRight
                     size={14}
                     strokeWidth={1.5}
-                    className="text-[#9C9C94] group-hover:text-[#004A30] transition-all duration-300"
+                    className="text-[#9C9C94] group-hover:text-[#1E4D3A] transition-all duration-300"
                   />
                 </a>
               </div>
@@ -315,7 +315,7 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <div className="bg-[#004A30] rounded-3xl p-8">
+              <div className="bg-[#1E4D3A] rounded-3xl p-8">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-5">
                   <Heart size={16} strokeWidth={1.5} className="text-white" />
                 </div>
@@ -335,7 +335,7 @@ const ContactPage = () => {
 
                 <button
                   onClick={handleBagisClick}
-                  className="inline-flex items-center gap-2 bg-white text-[#004A30] text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#FAF9F6] transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-white text-[#1E4D3A] text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#FAF9F6] transition-all duration-300"
                 >
                   Bize Ulaşın
                   <ArrowUpRight size={13} strokeWidth={2} />

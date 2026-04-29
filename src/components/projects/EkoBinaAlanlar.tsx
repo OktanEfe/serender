@@ -44,7 +44,7 @@ const EkoBinaAlanlar = () => {
     <section className="w-full bg-[#FAF9F6] py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div className="mb-12">
-          <span className="text-[10px] font-medium tracking-[0.25em] text-[#004A30]/70 uppercase mb-4 block">
+          <span className="text-[10px] font-medium tracking-[0.25em] text-[#1E4D3A]/70 uppercase mb-4 block">
             Merkezde Neler Var
           </span>
           <h2 className="text-[#231F20] text-3xl md:text-4xl font-light leading-tight tracking-tight">
@@ -61,11 +61,11 @@ const EkoBinaAlanlar = () => {
               onClick={() => setActiveArea(i)}
               className={`group flex items-center gap-2 px-5 py-2.5 rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 ${
                 activeArea === i
-                  ? "bg-[#004A30] text-white shadow-[0_4px_16px_-4px_rgba(0,74,48,0.4)]"
-                  : "bg-white text-[#5C5C56] border border-[#E8E4DC] hover:border-[#004A30]/30 hover:text-[#004A30] hover:shadow-sm"
+                  ? "bg-[#1E4D3A] text-white shadow-[0_4px_16px_-4px_rgba(0,74,48,0.4)]"
+                  : "bg-white text-[#5C5C56] border border-[#E8E4DC] hover:border-[#1E4D3A]/30 hover:text-[#1E4D3A] hover:shadow-sm"
               }`}
             >
-              <span className={`text-[10px] font-semibold tracking-wider ${activeArea === i ? "text-white/50" : "text-[#9C9C94] group-hover:text-[#004A30]/50"}`}>
+              <span className={`text-[10px] font-semibold tracking-wider ${activeArea === i ? "text-white/50" : "text-[#9C9C94] group-hover:text-[#1E4D3A]/50"}`}>
                 {area.id}
               </span>
               {area.title}
@@ -97,10 +97,10 @@ const EkoBinaAlanlar = () => {
           {/* Metin */}
           <div className="flex flex-col justify-center lg:py-4">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-[10px] font-semibold tracking-[0.2em] text-[#004A30]/50 uppercase">
+              <span className="text-[10px] font-semibold tracking-[0.2em] text-[#1E4D3A]/50 uppercase">
                 {areas[activeArea].id}
               </span>
-              <div className="w-8 h-[1px] bg-[#004A30]/20" />
+              <div className="w-8 h-[1px] bg-[#1E4D3A]/20" />
               <span className="text-[10px] font-medium tracking-[0.15em] text-[#9C9C94] uppercase">
                 Faaliyet Alanı
               </span>
@@ -116,7 +116,7 @@ const EkoBinaAlanlar = () => {
             <div className="flex items-center gap-4 mt-8 pt-6 border-t border-[#E8E4DC]">
               <button
                 onClick={() => setActiveArea((prev) => (prev - 1 + areas.length) % areas.length)}
-                className="flex items-center gap-2 text-[12px] font-medium text-[#9C9C94] hover:text-[#004A30] transition-colors rotate-180"
+                className="flex items-center gap-2 text-[12px] font-medium text-[#9C9C94] hover:text-[#1E4D3A] transition-colors rotate-180"
               >
                 <ArrowRight size={14} strokeWidth={1.5} />
               </button>
@@ -125,7 +125,7 @@ const EkoBinaAlanlar = () => {
               </span>
               <button
                 onClick={() => setActiveArea((prev) => (prev + 1) % areas.length)}
-                className="flex items-center gap-2 text-[12px] font-medium text-[#9C9C94] hover:text-[#004A30] transition-colors"
+                className="flex items-center gap-2 text-[12px] font-medium text-[#9C9C94] hover:text-[#1E4D3A] transition-colors"
               >
                 <ArrowRight size={14} strokeWidth={1.5} />
               </button>

@@ -6,7 +6,7 @@ const EkoBinaAmac = () => {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div>
-            <span className="text-[10px] font-medium tracking-[0.25em] text-[#004A30]/70 uppercase mb-6 block">
+            <span className="text-[10px] font-medium tracking-[0.25em] text-[#1E4D3A]/70 uppercase mb-6 block">
               Projenin Amacı
             </span>
             <h2 className="text-[#231F20] text-3xl md:text-4xl font-light leading-tight tracking-tight mb-8">

@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const EkoBinaHero = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-end bg-[#004A30] overflow-hidden pb-20 pt-32">
+    <section className="relative w-full min-h-screen flex items-end bg-[#1E4D3A] overflow-hidden pb-20 pt-32">
 
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0F6A4A]/20 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#003623]/50 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#13362A]/50 rounded-full blur-[120px]" />
       </div>
 
       {/* Desktop — sağda fotoğraf */}
@@ -18,8 +18,8 @@ const EkoBinaHero = () => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#004A30] via-[#004A30]/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#004A30]/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E4D3A] via-[#1E4D3A]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1E4D3A]/50 via-transparent to-transparent" />
       </div>
 
       {/* Mobil — tam arka plan fotoğraf */}
@@ -31,8 +31,8 @@ const EkoBinaHero = () => {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-[#004A30]/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#004A30]/90 via-[#004A30]/50 to-[#004A30]/30" />
+        <div className="absolute inset-0 bg-[#1E4D3A]/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1E4D3A]/90 via-[#1E4D3A]/50 to-[#1E4D3A]/30" />
       </div>
 
       <svg className="absolute bottom-0 left-0 w-full pointer-events-none opacity-[0.07]" viewBox="0 0 1200 100" preserveAspectRatio="none">

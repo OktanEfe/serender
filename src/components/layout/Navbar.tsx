@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
@@ -39,13 +40,32 @@ const Navbar = () => {
             : "bg-[#FAF9F6] border-b border-[#E8E4DC]/60"
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+        <div
+  className="max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between"
+  style={{
+    height: scrolled ? "76px" : "100px",
+    transition: "height 0.5s ease",
+  }}
+>
 
           <Link
             href="/"
-            className="text-[#231F20] text-xl md:text-2xl font-light tracking-tight hover:text-[#1E4D3A] transition-colors duration-300"
+            className="flex items-center hover:opacity-80 transition-opacity duration-300"
+            aria-label="Serender Anasayfa"
           >
-            Serender
+            <Image
+              src="/Serender.svg"
+              alt="Serender Ekolojik Yaşam Derneği"
+              width={600}
+              height={200}
+              priority
+              style={{
+                height: scrolled ? "130px" : "200px",
+                width: "auto",
+                objectFit: "contain",
+                transition: "height 0.5s ease",
+              }}
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -107,13 +127,29 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between px-6 h-16 border-b border-[#E8E4DC]">
-            <span className="text-[#231F20] text-lg font-light tracking-tight">
-              Serender
-            </span>
+          <div className="flex items-center justify-between px-6 border-b border-[#E8E4DC]" 
+          style={{
+
+            height: scrolled ? "76px" : "100px",
+          
+            transition: "height 0.5s ease",
+          
+          }}>
+            <Image
+              src="/images/SERENDER.svg"
+              alt="Serender"
+              width={500}
+              height={170}
+              style={{
+                height: "100px",
+                width: "auto",
+                objectFit: "contain",
+              }}
+            />
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2 -mr-1 text-[#5C5C56] hover:text-[#231F20] transition-colors"
+              className="p-2 -mr-1 text-[#5C5C56] hover:text-[#231F20] transition-colors flex-shrink-0"
+              aria-label="Menüyü kapat"
             >
               <X size={20} strokeWidth={1.5} />
             </button>

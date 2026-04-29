@@ -21,7 +21,7 @@ const EkoBinaEtki = () => {
     <section className="w-full bg-white py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div className="mb-12">
-          <span className="text-[10px] font-medium tracking-[0.25em] text-[#004A30]/70 uppercase mb-4 block">
+          <span className="text-[10px] font-medium tracking-[0.25em] text-[#1E4D3A]/70 uppercase mb-4 block">
             Neden Bu Proje
           </span>
           <h2 className="text-[#231F20] text-3xl md:text-4xl font-light leading-tight tracking-tight">
@@ -40,7 +40,7 @@ const EkoBinaEtki = () => {
                 key={i}
                 className={`rounded-3xl p-8 ${
                   isDark
-                    ? "bg-[#004A30]"
+                    ? "bg-[#1E4D3A]"
                     : isWarm
                     ? "bg-[#3D2B1F]"
                     : "bg-[#FAF9F6] border border-[#E8E4DC]"
@@ -66,7 +66,7 @@ const EkoBinaEtki = () => {
                             ? "bg-white/40"
                             : isWarm
                             ? "bg-[#C4956A]/50"
-                            : "bg-[#004A30]/40"
+                            : "bg-[#1E4D3A]/40"
                         }`}
                       />
                       <p

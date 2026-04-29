@@ -2,11 +2,11 @@ import React from "react";
 
 const AboutHero = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#004A30] overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-[#1E4D3A] overflow-hidden">
 
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0F6A4A]/25 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#003623]/50 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#13362A]/50 rounded-full blur-[120px]" />
       </div>
 
       {/* Botanik SVG İllüstrasyon — Sağ Taraf */}

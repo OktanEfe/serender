@@ -42,7 +42,7 @@ const AboutValues = () => {
 
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 md:mb-20 gap-6">
           <div>
-            <span className="text-[10px] font-medium tracking-[0.25em] text-[#004A30]/70 uppercase mb-6 block">
+            <span className="text-[10px] font-medium tracking-[0.25em] text-[#1E4D3A]/70 uppercase mb-6 block">
               Değerlerimiz
             </span>
             <h2 className="text-[#231F20] text-3xl md:text-5xl font-light leading-tight tracking-tight">

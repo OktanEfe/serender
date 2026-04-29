@@ -56,7 +56,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
                 Tüm Yazılar
               </Link>
 
-              <p className="text-[#231F20] text-xl md:text-2xl font-light leading-relaxed mb-10 border-l-2 border-[#004A30] pl-6 italic">
+              <p className="text-[#231F20] text-xl md:text-2xl font-light leading-relaxed mb-10 border-l-2 border-[#1E4D3A] pl-6 italic">
                 {post.excerpt}
               </p>
 
@@ -89,7 +89,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
             </article>
 
             <aside className="flex flex-col gap-6">
-              <div className="bg-[#004A30] rounded-3xl p-7 text-white">
+              <div className="bg-[#1E4D3A] rounded-3xl p-7 text-white">
                 <p className="text-[10px] font-medium tracking-[0.2em] text-white/40 uppercase mb-4">
                   Topluluğa Katıl
                 </p>
@@ -98,7 +98,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
                 </p>
                 <Link
                   href="/bize-ulasin"
-                  className="inline-flex items-center gap-2 bg-white text-[#004A30] text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#FAF9F6] transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-white text-[#1E4D3A] text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#FAF9F6] transition-all duration-300"
                 >
                   İletişime Geç
                   <ArrowUpRight size={13} strokeWidth={2} />
@@ -114,7 +114,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
                 </p>
                 <Link
                   href="/projeler/eko-bina"
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#004A30] hover:text-[#003623] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#1E4D3A] hover:text-[#13362A] transition-colors"
                 >
                   Projemizi Gör
                   <ArrowUpRight size={13} strokeWidth={1.5} />
@@ -135,7 +135,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
               <Link
                 key={p.id}
                 href={"/blog/" + p.slug}
-                className="group bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#E8E4DC] hover:border-[#004A30]/15 transition-all duration-500 hover:-translate-y-1 flex gap-5 p-4"
+                className="group bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#E8E4DC] hover:border-[#1E4D3A]/15 transition-all duration-500 hover:-translate-y-1 flex gap-5 p-4"
               >
                 <div className="relative w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
                   <Image
@@ -147,7 +147,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
                   />
                 </div>
                 <div className="flex flex-col justify-center gap-1.5">
-                  <span className="text-[10px] font-medium tracking-[0.15em] text-[#004A30] uppercase">
+                  <span className="text-[10px] font-medium tracking-[0.15em] text-[#1E4D3A] uppercase">
                     {p.category}
                   </span>
                   <h3 className="text-[#231F20] text-sm font-medium leading-snug">
