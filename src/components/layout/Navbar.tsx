@@ -31,7 +31,7 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  
+
 
   return (
     <>
@@ -138,7 +138,7 @@ const Navbar = () => {
           
           }}>
             <Image
-              src="/images/SERENDER.svg"
+              src="/SERENDER.svg"
               alt="Serender"
               width={500}
               height={170}
