@@ -31,8 +31,6 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-
-
   return (
     <>
       <nav
@@ -43,13 +41,12 @@ const Navbar = () => {
         }`}
       >
         <div
-  className="max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between"
-  style={{
-    height: scrolled ? "76px" : "100px",
-    transition: "height 0.5s ease",
-  }}
->
-
+          className="max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between"
+          style={{
+            height: scrolled ? "76px" : "100px",
+            transition: "height 0.5s ease",
+          }}
+        >
           <Link
             href="/"
             className="flex items-center hover:opacity-80 transition-opacity duration-300"
@@ -129,21 +126,17 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between px-6 border-b border-[#E8E4DC]" 
-          style={{
-
-            height: scrolled ? "76px" : "100px",
-          
-            transition: "height 0.5s ease",
-          
-          }}>
+          <div
+            className="flex items-center justify-between px-6 border-b border-[#E8E4DC]"
+            style={{ height: "76px" }}
+          >
             <Image
               src="/SERENDER.svg"
               alt="Serender"
               width={500}
               height={170}
               style={{
-                height: "100px",
+                height: "38px",
                 width: "auto",
                 objectFit: "contain",
               }}
