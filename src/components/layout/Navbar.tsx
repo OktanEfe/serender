@@ -57,6 +57,7 @@ const Navbar = () => {
                 height: scrolled ? "180px" : "280px",
               }}
             />
+            
 
             <img
               src="/SERENDER2.png"
