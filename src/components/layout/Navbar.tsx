@@ -57,13 +57,13 @@ const Navbar = () => {
                 height: scrolled ? "180px" : "280px",
               }}
             />
-            
+
 
             <img
               src="/SERENDER2.png"
               alt="Serender Ekolojik Yaşam Derneği"
               className="block md:hidden w-auto object-contain"
-              style={{ height: "155px" }}
+              style={{ height: "150px" }}
             />
           </Link>
 
@@ -133,7 +133,7 @@ const Navbar = () => {
               src="/SERENDER2.png"
               alt="Serender"
               className="w-auto object-contain"
-              style={{ height: "145px" }}
+              style={{ height: "140px" }}
             />
 
             <button
