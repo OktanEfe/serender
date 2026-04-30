@@ -62,19 +62,22 @@ const Footer = () => {
             Dernek
           </p>
           <ul className="flex flex-col gap-3">
-            {[
-              { label: "Hakkımızda", href: "/hakkimizda" },
-              { label: "Değerlerimiz", href: "/hakkimizda#degerlerimiz" },
-            ].map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href}
-                  className="inline-block text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                href="/hakkimizda"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                Hakkımızda
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/hakkimizda#degerlerimiz"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                Değerlerimiz
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -83,19 +86,22 @@ const Footer = () => {
             Projeler
           </p>
           <ul className="flex flex-col gap-3">
-            {[
-              { label: "Eko Bina", href: "/projeler/eko-bina" },
-              { label: "Tüm Projeler", href: "/projeler" },
-            ].map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href}
-                  className="inline-block text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                href="/projeler/eko-bina"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                Eko Bina
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/projeler"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                Tüm Projeler
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -104,21 +110,38 @@ const Footer = () => {
             Keşfet
           </p>
           <ul className="flex flex-col gap-3">
-            {[
-              { label: "Blog", href: "/blog" },
-              { label: "Haberler", href: "/blog#haberler" },
-              { label: "Etkinlikler", href: "/blog#etkinlikler" },
-              { label: "KVKK", href: "/kvkk" },
-            ].map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href}
-                  className="inline-block text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                href="/blog"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog#haberler"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                Haberler
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog#etkinlikler"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                Etkinlikler
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/kvkk"
+                className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+              >
+                KVKK
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -127,21 +150,26 @@ const Footer = () => {
             İletişim
           </p>
 
-          <p className="text-[11px] font-medium tracking-[0.12em] text-[#9C9C94] uppercase mb-3">
-            E-posta
-          </p>
+          <div className="flex flex-col gap-3">
+            <Link
+              href="/bize-ulasin"
+              className="text-[14px] text-[#5C5C56] hover:text-[#1E4D3A] transition-colors duration-200"
+            >
+              Bize Ulaşın
+            </Link>
 
-          <a
-            href="mailto:info@serenderekolojik.com"
-            className="text-[15px] sm:text-base font-normal text-[#231F20] hover:text-[#1E4D3A] transition-colors duration-300 inline-flex items-center gap-1.5 group break-all leading-relaxed"
-          >
-            info@serenderekolojik.com
-            <ArrowUpRight
-              size={15}
-              strokeWidth={1.5}
-              className="text-[#9C9C94] group-hover:text-[#1E4D3A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0"
-            />
-          </a>
+            <a
+              href="mailto:info@serenderekolojik.com"
+              className="text-[15px] sm:text-base font-normal text-[#231F20] hover:text-[#1E4D3A] transition-colors duration-300 inline-flex items-center gap-1.5 group break-all leading-relaxed"
+            >
+              info@serenderekolojik.com
+              <ArrowUpRight
+                size={15}
+                strokeWidth={1.5}
+                className="text-[#9C9C94] group-hover:text-[#1E4D3A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0"
+              />
+            </a>
+          </div>
         </div>
       </div>
 

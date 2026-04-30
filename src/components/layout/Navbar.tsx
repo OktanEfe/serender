@@ -132,7 +132,7 @@ const Navbar = () => {
               src="/SERENDER.png"
               alt="Serender"
               className="w-auto object-contain"
-              style={{ height: "135px" }}
+              style={{ height: "145px" }}
             />
 
             <button
