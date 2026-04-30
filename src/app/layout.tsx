@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import PageTransition from "@/components/providers/PageTransition";
 import "./globals.css";
 
 const inter = Inter({
@@ -101,10 +103,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
 
-  verification: {
-    // Google Search Console doğrulama kodu eklenince buraya:
-    // google: "abcdefg123456",
-  },
+  verification: {},
 
   category: "ekoloji, sürdürülebilirlik, çevre",
 };
@@ -117,7 +116,6 @@ export default function RootLayout({
   return (
     <html lang="tr" className={inter.variable}>
       <head>
-        {/* Schema.org JSON-LD — Google için rich snippet */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -162,10 +160,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased font-sans">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <body className="antialiased font-sans bg-[#FAF9F6] text-[#231F20] overflow-x-hidden">
+        <SmoothScrollProvider>
+          <Navbar />
+          <PageTransition>
+            <main>{children}</main>
+          </PageTransition>
+          <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
