@@ -41,13 +41,9 @@ const Navbar = () => {
         }`}
       >
         <div
-          className="max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between h-[76px] md:h-auto"
+          className="max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between"
           style={{
-            height: typeof window !== "undefined" && window.innerWidth >= 768
-              ? scrolled
-                ? "76px"
-                : "100px"
-              : undefined,
+            height: scrolled ? "76px" : "100px",
             transition: "height 0.5s ease",
           }}
         >
@@ -62,14 +58,8 @@ const Navbar = () => {
               width={600}
               height={200}
               priority
-              className="h-[34px] w-auto object-contain md:h-auto"
               style={{
-                height:
-                  typeof window !== "undefined" && window.innerWidth >= 768
-                    ? scrolled
-                      ? "130px"
-                      : "200px"
-                    : undefined,
+                height: scrolled ? "130px" : "200px",
                 width: "auto",
                 objectFit: "contain",
                 transition: "height 0.5s ease",
@@ -136,15 +126,18 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between px-6 border-b border-[#E8E4DC] h-[76px]">
+          <div
+            className="flex items-center justify-between px-6 border-b border-[#E8E4DC]"
+            style={{ height: "76px" }}
+          >
             <Image
-              src="/SERENDER.svg"
-              alt="Serender"
-              width={180}
-              height={40}
-              className="h-[24px] w-auto max-w-[130px] object-contain"
-              priority
-            />
+  src="/SERENDER.svg"
+  alt="Serender"
+  width={180}
+  height={40}
+  className="h-[26px] w-auto max-w-[140px] object-contain"
+  priority
+/>
             <button
               onClick={() => setIsOpen(false)}
               className="p-2 -mr-1 text-[#5C5C56] hover:text-[#231F20] transition-colors flex-shrink-0"
