@@ -40,8 +40,8 @@ const Navbar = () => {
         }`}
       >
         <div
-          className={`max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between transition-all duration-500 h-[64px] ${
-            scrolled ? "md:h-[76px]" : "md:h-[100px]"
+          className={`max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between transition-all duration-500 h-[84px] ${
+            scrolled ? "md:h-[95px]" : "md:h-[125px]"
           }`}
         >
           <Link
@@ -49,22 +49,20 @@ const Navbar = () => {
             className="flex items-center hover:opacity-80 transition-opacity duration-300"
             aria-label="Serender Anasayfa"
           >
-            {/* Desktop logo */}
             <img
               src="/SERENDER.png"
               alt="Serender Ekolojik Yaşam Derneği"
               className="hidden md:block w-auto object-contain transition-all duration-500"
               style={{
-                height: scrolled ? "130px" : "200px",
+                height: scrolled ? "180px" : "280px",
               }}
             />
 
-            {/* Mobile logo — daha büyük ve dengeli */}
             <img
               src="/SERENDER.png"
               alt="Serender Ekolojik Yaşam Derneği"
               className="block md:hidden w-auto object-contain"
-              style={{ height: "90px" }}
+              style={{ height: "155px" }}
             />
           </Link>
 
@@ -129,12 +127,12 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between px-6 h-[64px] border-b border-[#E8E4DC]">
+          <div className="flex items-center justify-between px-6 h-[84px] border-b border-[#E8E4DC]">
             <img
               src="/SERENDER.png"
               alt="Serender"
               className="w-auto object-contain"
-              style={{ height: "80px" }}
+              style={{ height: "135px" }}
             />
 
             <button
