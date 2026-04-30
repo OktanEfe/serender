@@ -131,16 +131,13 @@ const Navbar = () => {
             style={{ height: "76px" }}
           >
             <Image
-              src="/SERENDER.svg"
-              alt="Serender"
-              width={500}
-              height={170}
-              style={{
-                height: "38px",
-                width: "auto",
-                objectFit: "contain",
-              }}
-            />
+  src="/SERENDER.svg"
+  alt="Serender"
+  width={180}
+  height={40}
+  className="h-[26px] w-auto max-w-[140px] object-contain"
+  priority
+/>
             <button
               onClick={() => setIsOpen(false)}
               className="p-2 -mr-1 text-[#5C5C56] hover:text-[#231F20] transition-colors flex-shrink-0"
