@@ -51,7 +51,7 @@ const Navbar = () => {
           >
             {/* Desktop logo */}
             <img
-              src="/SERENDER.svg"
+              src="/SERENDER.png"
               alt="Serender Ekolojik Yaşam Derneği"
               className="hidden md:block w-auto object-contain transition-all duration-500"
               style={{
@@ -61,7 +61,7 @@ const Navbar = () => {
 
             {/* Mobile logo — daha büyük ve dengeli */}
             <img
-              src="/SERENDER.svg"
+              src="/SERENDER.png"
               alt="Serender Ekolojik Yaşam Derneği"
               className="block md:hidden w-auto object-contain"
               style={{ height: "90px" }}
@@ -131,7 +131,7 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between px-6 h-[64px] border-b border-[#E8E4DC]">
             <img
-              src="/SERENDER.svg"
+              src="/SERENDER.png"
               alt="Serender"
               className="w-auto object-contain"
               style={{ height: "80px" }}
