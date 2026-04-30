@@ -35,3 +35,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html,
+body {
+  background-color: #FAF9F6;
+}
+
+main {
+  background-color: #FAF9F6;
+}

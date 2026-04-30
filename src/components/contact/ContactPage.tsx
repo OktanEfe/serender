@@ -13,6 +13,8 @@ const ContactPage = () => {
     mesaj: "",
   });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -20,9 +22,35 @@ const ContactPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Bir hata oluştu");
+      }
+
+      setSent(true);
+    } catch (err) {
+      console.error(err);
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Mesajınız gönderilemedi. Lütfen tekrar deneyin."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleBagisClick = () => {
@@ -192,12 +220,19 @@ const ContactPage = () => {
                       />
                     </div>
 
+                    {error && (
+                      <div className="bg-red-50 border border-red-200 rounded-2xl px-4 py-3 text-[13px] text-red-700">
+                        {error}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 bg-[#1E4D3A] text-white text-[13px] font-medium tracking-wide px-8 py-4 rounded-full hover:bg-[#13362A] transition-all duration-300 w-fit mt-2"
+                      disabled={loading}
+                      className="inline-flex items-center gap-2 bg-[#1E4D3A] text-white text-[13px] font-medium tracking-wide px-8 py-4 rounded-full hover:bg-[#13362A] transition-all duration-300 w-fit mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Gönder
-                      <ArrowUpRight size={15} strokeWidth={2} />
+                      {loading ? "Gönderiliyor..." : "Gönder"}
+                      {!loading && <ArrowUpRight size={15} strokeWidth={2} />}
                     </button>
                   </form>
                 </>

@@ -12,36 +12,53 @@ import {
   import * as React from "react";
   
   type EmailTemplateProps = {
-    name: string;
-    email: string;
-    message: string;
+    ad: string;
+    eposta: string;
+    telefon: string;
+    konu: string;
+    mesaj: string;
   };
   
   export function EmailTemplate({
-    name,
-    email,
-    message,
+    ad,
+    eposta,
+    telefon,
+    konu,
+    mesaj,
   }: EmailTemplateProps) {
     return (
       <Html>
         <Head />
-        <Preview>Serender iletişim formundan yeni mesaj</Preview>
+        <Preview>Serender iletişim formundan yeni mesaj — {ad}</Preview>
         <Body style={main}>
           <Container style={container}>
-            <Heading style={heading}>Yeni İletişim Formu Mesajı</Heading>
+            <Text style={brandLabel}>SERENDER · İLETİŞİM FORMU</Text>
+            <Heading style={heading}>Yeni Mesaj</Heading>
   
             <Section style={card}>
               <Text style={label}>Ad Soyad</Text>
-              <Text style={value}>{name}</Text>
+              <Text style={value}>{ad}</Text>
+  
+              <Text style={label}>Konu</Text>
+              <Text style={value}>{konu}</Text>
+  
+              <Hr style={hr} />
   
               <Text style={label}>E-posta</Text>
-              <Text style={value}>{email}</Text>
+              <Text style={value}>{eposta}</Text>
+  
+              <Text style={label}>Telefon</Text>
+              <Text style={value}>{telefon}</Text>
   
               <Hr style={hr} />
   
               <Text style={label}>Mesaj</Text>
-              <Text style={messageStyle}>{message}</Text>
+              <Text style={messageStyle}>{mesaj}</Text>
             </Section>
+  
+            <Text style={footer}>
+              Bu mesaj serenderekolojik.com iletişim formu üzerinden iletilmiştir.
+            </Text>
           </Container>
         </Body>
       </Html>
@@ -63,11 +80,20 @@ import {
     border: "1px solid #E8E4DC",
   };
   
-  const heading = {
-    fontSize: "24px",
+  const brandLabel = {
+    fontSize: "11px",
+    letterSpacing: "0.2em",
+    color: "#1E4D3A",
     fontWeight: "600",
+    margin: "0 0 16px",
+    textTransform: "uppercase" as const,
+  };
+  
+  const heading = {
+    fontSize: "26px",
+    fontWeight: "300",
     color: "#231F20",
-    margin: "0 0 24px",
+    margin: "0 0 28px",
   };
   
   const card = {
@@ -75,17 +101,18 @@ import {
   };
   
   const label = {
-    fontSize: "12px",
+    fontSize: "11px",
     textTransform: "uppercase" as const,
-    letterSpacing: "0.08em",
+    letterSpacing: "0.1em",
     color: "#9C9C94",
+    fontWeight: "500",
     margin: "0 0 6px",
   };
   
   const value = {
     fontSize: "15px",
     color: "#231F20",
-    margin: "0 0 18px",
+    margin: "0 0 16px",
   };
   
   const messageStyle = {
@@ -100,3 +127,11 @@ import {
     borderColor: "#E8E4DC",
     margin: "20px 0",
   };
+  
+  const footer = {
+    fontSize: "12px",
+    color: "#9C9C94",
+    textAlign: "center" as const,
+    margin: "24px 0 0",
+  };
+  

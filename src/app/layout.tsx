@@ -161,14 +161,16 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased font-sans bg-[#FAF9F6] text-[#231F20] overflow-x-hidden">
-        <SmoothScrollProvider>
-          <Navbar />
-          <PageTransition>
-            <main>{children}</main>
-          </PageTransition>
-          <Footer />
-        </SmoothScrollProvider>
-      </body>
+  <SmoothScrollProvider>
+    <Navbar />
+    <PageTransition>
+      <main className="min-h-screen bg-[#FAF9F6]">
+        {children}
+      </main>
+    </PageTransition>
+    <Footer />
+  </SmoothScrollProvider>
+</body>
     </html>
   );
 }

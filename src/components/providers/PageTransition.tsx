@@ -12,13 +12,14 @@ export default function PageTransition({
   const pathname = usePathname();
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="popLayout" initial={false}>
       <motion.div
         key={pathname}
-        initial={{ opacity: 0, y: 18 }}
+        className="min-h-screen bg-[#FAF9F6]"
+        initial={{ opacity: 0.98, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 18 }}
-        transition={{ duration: 0.55, ease: "easeOut" }}
+        exit={{ opacity: 0.98, y: 0 }}
+        transition={{ duration: 0.22, ease: "easeOut" }}
       >
         {children}
       </motion.div>
