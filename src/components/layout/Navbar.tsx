@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
@@ -41,29 +40,31 @@ const Navbar = () => {
         }`}
       >
         <div
-          className="max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between"
-          style={{
-            height: scrolled ? "76px" : "100px",
-            transition: "height 0.5s ease",
-          }}
+          className={`max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between transition-all duration-500 h-[64px] ${
+            scrolled ? "md:h-[76px]" : "md:h-[100px]"
+          }`}
         >
           <Link
             href="/"
             className="flex items-center hover:opacity-80 transition-opacity duration-300"
             aria-label="Serender Anasayfa"
           >
-            <Image
+            {/* Desktop logo */}
+            <img
               src="/SERENDER.svg"
               alt="Serender Ekolojik Yaşam Derneği"
-              width={600}
-              height={200}
-              priority
+              className="hidden md:block w-auto object-contain transition-all duration-500"
               style={{
                 height: scrolled ? "130px" : "200px",
-                width: "auto",
-                objectFit: "contain",
-                transition: "height 0.5s ease",
               }}
+            />
+
+            {/* Mobile logo — daha büyük ve dengeli */}
+            <img
+              src="/SERENDER.svg"
+              alt="Serender Ekolojik Yaşam Derneği"
+              className="block md:hidden w-auto object-contain"
+              style={{ height: "90px" }}
             />
           </Link>
 
@@ -113,7 +114,9 @@ const Navbar = () => {
 
       <div
         className={`fixed inset-0 z-[998] md:hidden transition-all duration-400 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
         <div
@@ -126,18 +129,14 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div
-            className="flex items-center justify-between px-6 border-b border-[#E8E4DC]"
-            style={{ height: "76px" }}
-          >
-            <Image
-  src="/SERENDER.svg"
-  alt="Serender"
-  width={180}
-  height={40}
-  className="h-[26px] w-auto max-w-[140px] object-contain"
-  priority
-/>
+          <div className="flex items-center justify-between px-6 h-[64px] border-b border-[#E8E4DC]">
+            <img
+              src="/SERENDER.svg"
+              alt="Serender"
+              className="w-auto object-contain"
+              style={{ height: "80px" }}
+            />
+
             <button
               onClick={() => setIsOpen(false)}
               className="p-2 -mr-1 text-[#5C5C56] hover:text-[#231F20] transition-colors flex-shrink-0"
