@@ -50,7 +50,7 @@ const Navbar = () => {
             aria-label="Serender Anasayfa"
           >
             <img
-              src="/SERENDER.png"
+              src="/SERENDER2.png"
               alt="Serender Ekolojik Yaşam Derneği"
               className="hidden md:block w-auto object-contain transition-all duration-500"
               style={{
@@ -59,7 +59,7 @@ const Navbar = () => {
             />
 
             <img
-              src="/SERENDER.png"
+              src="/SERENDER2.png"
               alt="Serender Ekolojik Yaşam Derneği"
               className="block md:hidden w-auto object-contain"
               style={{ height: "155px" }}
@@ -129,7 +129,7 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between px-6 h-[84px] border-b border-[#E8E4DC]">
             <img
-              src="/SERENDER.png"
+              src="/SERENDER2.png"
               alt="Serender"
               className="w-auto object-contain"
               style={{ height: "145px" }}
