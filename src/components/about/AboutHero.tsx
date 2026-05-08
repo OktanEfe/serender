@@ -9,7 +9,6 @@ const AboutHero = () => {
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#13362A]/50 rounded-full blur-[120px]" />
       </div>
 
-      {/* Botanik SVG İllüstrasyon — Sağ Taraf */}
       <svg
         className="absolute right-0 top-0 h-full w-[55%] opacity-[0.12] pointer-events-none"
         viewBox="0 0 600 900"
@@ -58,7 +57,6 @@ const AboutHero = () => {
         <path d="M450 800 C450 800 580 700 590 560 C600 420 520 340 480 300 C560 380 580 480 560 580 C540 680 480 760 450 800Z" fill="white" fillOpacity="0.03"/>
       </svg>
 
-      {/* Sol alt köşe yaprak detayı */}
       <svg
         className="absolute left-0 bottom-0 w-[220px] h-[220px] opacity-[0.07] pointer-events-none"
         viewBox="0 0 200 200"
@@ -69,7 +67,6 @@ const AboutHero = () => {
         <path d="M0 160 C0 160 40 130 70 85 C90 55 85 20 85 20 C85 20 70 55 45 85 C15 120 0 160 0 160Z" fill="white"/>
       </svg>
 
-      {/* İçerik */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 w-full pt-32 pb-24">
         <div className="max-w-2xl">
 

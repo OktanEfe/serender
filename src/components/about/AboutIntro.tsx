@@ -45,7 +45,7 @@ const AboutIntro = () => {
               <div className="absolute inset-0 bg-[#B7D8A6]/10 rounded-full blur-[80px]" />
 
               <Image
-                src="/SERENDER.svg"
+                src="/SERENDER2.png"
                 alt="Serender Ekolojik Yaşam Derneği"
                 width={720}
                 height={720}
