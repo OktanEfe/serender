@@ -11,6 +11,8 @@ const KONU_LABELS: Record<string, string> = {
   gonullu: "Gönüllülük",
   basin: "Basın & Medya",
   diger: "Diğer",
+  ekip: "Ekibe Katılma Başvurusu",
+
 };
 
 function buildEmailHtml(params: {

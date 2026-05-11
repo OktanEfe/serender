@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { posts } from "@/data/posts";
 import BlogSlugPage from "@/components/blog/BlogSlugPage";
 
-// Her blog yazısı için dinamik metadata
 export async function generateMetadata({
   params,
 }: {

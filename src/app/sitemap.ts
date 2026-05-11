@@ -4,7 +4,6 @@ import { posts } from "@/data/posts";
 const SITE_URL = "https://www.serenderekolojik.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Statik sayfalar
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
@@ -38,7 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dinamik blog yazıları
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.date),

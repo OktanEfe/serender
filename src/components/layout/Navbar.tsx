@@ -9,7 +9,10 @@ const navLinks = [
   { name: "Anasayfa", href: "/" },
   { name: "Hakkımızda", href: "/hakkimizda" },
   { name: "Blog", href: "/blog" },
-  { name: "Eko-Bina", href: "/projeler/eko-bina" },
+  { name: "Eko-Bina", href: "/projeler/eko-bina" },  
+  { name: "Kompost", href: "/kompost" },
+
+
 ];
 
 const Navbar = () => {
