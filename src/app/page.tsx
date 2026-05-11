@@ -5,6 +5,8 @@ import ValuesSection from "@/components/home/ValuesSection";
 import FeaturedProject from "@/components/home/FeaturedProject";
 import BlogPreview from "@/components/home/BlogPreview";
 import QuoteCTA from "@/components/home/QuoteSection";
+import SupportSection from "@/components/home/SupportSection";
+
 
 export const metadata: Metadata = {
   title: "Anasayfa",
@@ -27,6 +29,7 @@ export default function HomePage() {
       <Hero />
       <IntroSection />
       <ValuesSection />
+  <SupportSection />
       <FeaturedProject />
       <BlogPreview />
       <QuoteCTA />
