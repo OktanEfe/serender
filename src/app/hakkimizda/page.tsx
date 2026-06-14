@@ -3,7 +3,6 @@ import AboutHero from "@/components/about/AboutHero";
 import AboutIntro from "@/components/about/AboutIntro";
 import AboutStory from "@/components/about/AboutStory";
 import AboutValues from "@/components/about/AboutValues";
-import AboutVision from "@/components/about/AboutVision";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
@@ -34,7 +33,6 @@ export default function HakkimizdaPage() {
       <AboutIntro />
       <AboutStory />
       <AboutValues />
-      <AboutVision />
     </>
   );
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -50,36 +49,42 @@ const kompostTurleri = [
   },
 ];
 
-const asamalar = [
+const kompostSureci = [
   {
     no: "01",
-    baslik: "Yer & Kap Seçimi",
-    aciklama: "Doğrudan toprağa temas eden, havalanabilen ahşap veya plastik bir kompost kutusu seçin. En az 1m³ hacim idealdir.",
-    detay: "Güneş + gölge dengesi olan, yağmurdan etkilenmeyen bir köşe idealdir.",
+    baslik: "Topla",
+    aciklama: "Organik atıkları bir araya getir. Mutfak artıkları, yapraklar, kahve telvesi gibi malzemeleri topla.",
+    image: "/kompostyap%C4%B1m%C4%B1/topla.png",
   },
   {
     no: "02",
-    baslik: "Malzeme Katmanlama",
-    aciklama: "Karbon (kuru yaprak, sap, karton) ve azot (mutfak atığı, taze bitki) katmanlarını dönüşümlü ekleyin.",
-    detay: "30:1 C:N oranını koruyun. Her azot katmanının üstüne iki kat karbon ekleyin.",
+    baslik: "Yığın Oluştur",
+    aciklama: "Malzemeleri üst üste katmanlar halinde yerleştir ve karıştır.",
+    image: "/kompostyap%C4%B1m%C4%B1/y%C4%B1g%C4%B1nolustur.png",
   },
   {
     no: "03",
-    baslik: "Nem & Hava Kontrolü",
-    aciklama: "Kompost ıslak sünger gibi hissettirmeli — ne çok kuru ne çok ıslak.",
-    detay: "Haftada bir karıştırarak oksijen girin. Kuru ise su serpin, ıslaksa kuru yaprak ekleyin.",
+    baslik: "Nemlendir",
+    aciklama: "Kompost yığını nemli kalmalı, ama sulu olmamalı. Gerektiğinde su ekle.",
+    image: "/kompostyap%C4%B1m%C4%B1/nemlendir.png",
   },
   {
     no: "04",
-    baslik: "Olgunluk Testi",
-    aciklama: "Koyu renkli, mis kokulu, toprak gibi görünen kompost hazırdır.",
-    detay: "Orijinal malzemelerin formu tamamen tanınmamalıdır. Renk koyu kahverengi-siyah olmalıdır.",
+    baslik: "Havalandır",
+    aciklama: "Karışımı belirli aralıklarla çevir. Böylece oksijen alır ve ayrışma hızlanır.",
+    image: "/kompostyap%C4%B1m%C4%B1/havaland%C4%B1r.png",
   },
   {
     no: "05",
-    baslik: "Uygulama",
-    aciklama: "Olgun kompostu toprağa 5–10 cm kalınlığında serin.",
-    detay: "İlkbahar ve sonbaharda uygulamak en iyi sonucu verir. Ekimden 2–4 hafta önce karıştırın.",
+    baslik: "Olgunlaştır",
+    aciklama: "Kompost olgunlaşınca koyu renkli, kokusuz ve gevşek bir yapıya kavuşur.",
+    image: "/kompostyap%C4%B1m%C4%B1/olgunlast%C4%B1r.png",
+  },
+  {
+    no: "06",
+    baslik: "Uygula",
+    aciklama: "Olgunlaşmış kompostu toprağa karıştır veya bitkilerin dibine uygula.",
+    image: "/kompostyap%C4%B1m%C4%B1/uygula.png",
   },
 ];
 
@@ -189,33 +194,24 @@ export default function KompostPage() {
             </h2>
           </div>
 
-          <div className="space-y-6">
-            {kompostTurleri.map((tur, i) => (
-              <div key={tur.id} className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-3xl overflow-hidden border border-[#E8E4DC] bg-white">
-                <div className={`lg:col-span-4 relative min-h-[260px] sm:min-h-[300px] ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {kompostTurleri.map((tur) => (
+              <div key={tur.id} className="bg-white rounded-2xl overflow-hidden border border-[#E8E4DC]">
+                <div className="relative h-40">
                   <Image src={tur.image} alt={tur.baslik} fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-5 left-5">
-                    <span className="text-5xl font-extralight text-white/40">{tur.id}</span>
+                  <div className="absolute bottom-3 left-3 flex gap-2">
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] font-medium tracking-wide px-2.5 py-1 rounded-full">{tur.sure}</span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] font-medium tracking-wide px-2.5 py-1 rounded-full">{tur.zorluk}</span>
                   </div>
                 </div>
-                <div className={`lg:col-span-8 p-8 md:p-10 flex flex-col justify-between ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-3 mb-5">
-                      <h3 className="text-[#231F20] text-2xl md:text-3xl font-light tracking-tight">{tur.baslik}</h3>
-                      <span className="bg-[#FAF9F6] border border-[#E8E4DC] text-[#5C5C56] text-[11px] font-medium tracking-wide px-3 py-1 rounded-full">{tur.sure}</span>
-                      <span className="bg-[#1E4D3A]/8 text-[#1E4D3A] text-[11px] font-medium tracking-wide px-3 py-1 rounded-full">{tur.zorluk}</span>
-                    </div>
-                    <p className="text-[#5C5C56] text-base font-light leading-relaxed mb-4">{tur.ozet}</p>
-                    <p className="text-[#9C9C94] text-[14px] font-light leading-relaxed mb-6">{tur.detay}</p>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-medium tracking-[0.2em] text-[#9C9C94] uppercase mb-3">Gerekli Malzemeler</p>
-                    <div className="flex flex-wrap gap-2">
-                      {tur.malzemeler.map((m) => (
-                        <span key={m} className="bg-[#FAF9F6] border border-[#E8E4DC] text-[#5C5C56] text-[12px] font-light px-3 py-1.5 rounded-full">{m}</span>
-                      ))}
-                    </div>
+                <div className="p-5">
+                  <h3 className="text-[#231F20] text-lg font-medium tracking-tight mb-2">{tur.baslik}</h3>
+                  <p className="text-[#5C5C56] text-[13px] font-light leading-relaxed mb-4">{tur.ozet}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {tur.malzemeler.map((m) => (
+                      <span key={m} className="bg-[#FAF9F6] border border-[#E8E4DC] text-[#5C5C56] text-[11px] font-light px-2.5 py-1 rounded-full">{m}</span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -241,65 +237,50 @@ export default function KompostPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
-            {asamalar.map((adim, i) => (
-              <div key={adim.no} className="relative group">
-                <div className="bg-[#FAF9F6] border border-[#E8E4DC] rounded-3xl p-6 h-full flex flex-col hover:border-[#1E4D3A]/30 hover:bg-white transition-all duration-300">
-
-                  <div className="flex items-start justify-between mb-6">
-                    <span className="text-4xl font-extralight text-[#1E4D3A]/20 leading-none group-hover:text-[#1E4D3A]/40 transition-colors duration-300">
-                      {adim.no}
-                    </span>
-                    {i < asamalar.length - 1 && (
-                      <span className="hidden md:block text-[#E8E4DC] text-lg mt-1">→</span>
-                    )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {kompostSureci.map((adim) => (
+              <div key={adim.no} className="bg-[#FAF9F6] rounded-2xl overflow-hidden border border-[#E8E4DC]">
+                <div className="relative h-44">
+                  <Image
+                    src={adim.image}
+                    alt={adim.baslik}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-2.5 mb-2">
+                    <span className="text-xl font-extralight text-[#1E4D3A]/25 leading-none">{adim.no}</span>
+                    <h3 className="text-[#231F20] text-sm font-semibold tracking-tight">{adim.baslik}</h3>
                   </div>
-
-                  <h3 className="text-[#231F20] text-base font-medium tracking-tight mb-3 leading-snug">
-                    {adim.baslik}
-                  </h3>
-
-                  <p className="text-[#5C5C56] text-[13px] font-light leading-relaxed mb-4 flex-1">
-                    {adim.aciklama}
-                  </p>
-
-                  <div className="pt-4 border-t border-[#E8E4DC]">
-                    <p className="text-[#9C9C94] text-[11px] font-light leading-relaxed italic">
-                      {adim.detay}
-                    </p>
-                  </div>
+                  <p className="text-[#5C5C56] text-[12px] font-light leading-relaxed">{adim.aciklama}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="relative rounded-3xl overflow-hidden h-[280px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="relative rounded-2xl overflow-hidden h-[180px]">
               <Image src="/kompost/kompost-asamalar.webp" alt="Kompost malzemeleri" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1E4D3A]/60 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white/60 text-[10px] font-medium tracking-[0.2em] uppercase mb-1.5">İpucu</p>
-                <p className="text-white text-sm font-light leading-relaxed">
-                  Kompostun ıslak sünger gibi hissettirmesi gerekir — ne çok kuru ne çok ıslak.
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white/60 text-[10px] font-medium tracking-[0.2em] uppercase mb-1">İpucu</p>
+                <p className="text-white text-[13px] font-light leading-relaxed">
+                  Islak sünger kıvamı — ne çok kuru ne çok ıslak.
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#1E4D3A] rounded-3xl p-8 flex flex-col justify-between">
-              <div>
-                <p className="text-[10px] font-medium tracking-[0.2em] text-white/40 uppercase mb-4">Önemli Not</p>
-                <p className="text-white font-light text-base leading-relaxed mb-6">
-                  Et, süt ve yağlı yiyecekleri <strong className="font-medium text-[#B7D8A6]">sıcak kompost veya bokashi</strong>&apos;de kullanın.
-                  Soğuk kompost ve solucan kompostuna sadece bitkisel atık ekleyin.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
+            <div className="bg-[#1E4D3A] rounded-2xl p-5">
+              <p className="text-[10px] font-medium tracking-[0.2em] text-white/40 uppercase mb-3">Önemli Not</p>
+              <div className="grid grid-cols-2 gap-2">
                 {[
                   { label: "Sıcak & Bokashi", icerik: "Et, süt, pişmiş yemek ✓" },
-                  { label: "Soğuk & Solucan", icerik: "Sadece bitkisel atık ✓" },
+                  { label: "Soğuk & Solucan", icerik: "Yalnızca bitkisel atık ✓" },
                 ].map((kural) => (
-                  <div key={kural.label} className="bg-white/10 rounded-2xl p-4">
-                    <p className="text-[#B7D8A6] text-[10px] font-medium tracking-[0.15em] uppercase mb-1.5">{kural.label}</p>
+                  <div key={kural.label} className="bg-white/10 rounded-xl p-3">
+                    <p className="text-[#B7D8A6] text-[10px] font-medium tracking-[0.1em] uppercase mb-1">{kural.label}</p>
                     <p className="text-white/70 text-[12px] font-light">{kural.icerik}</p>
                   </div>
                 ))}
